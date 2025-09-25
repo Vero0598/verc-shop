@@ -1,0 +1,49 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffeef8; /* fondo rosita suave */
+    color: #d63384; /* texto principal rosita oscuro */
+    display: flex;
+}
+
+/* Menú lateral */
+nav {
+    width: 220px;
+    background-color: #ffb6d9; /* menú rosita */
+    height: 100vh; /* ocupa toda la altura */
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    position: fixed; /* siempre visible */
+}
+
+nav a {
+    color: white; /* enlaces en blanco */
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #ff85c1; /* rosita más fuerte al pasar el mouse */
+    color: white;
+}
+
+/* Contenido principal a la derecha */
+main {
+    margin-left: 220px; /* espacio para el menú */
+    padding: 30px 20px;
+    flex: 1;
+}
+
+/* Footer se ajusta */
+footer {
+    margin-left: 220px;
+    background-color: #ffb6d9; /* footer rosita */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
