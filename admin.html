@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>VERC Shop - Administración</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>VERC Shop - Administración</h1>
+
+    <h2>Agregar producto</h2>
+    <input type="text" id="nombre" placeholder="Nombre">
+    <input type="number" id="precio" placeholder="Precio">
+    <input type="number" id="cantidad" placeholder="Cantidad">
+    <input type="text" id="descripcion" placeholder="Descripción">
+    <button onclick="agregarAdmin()">Agregar</button>
+
+    <h2>Productos existentes</h2>
+    <div id="productosAdmin"></div>
+
+    <script src="js/modelo.js"></script>
+    <script src="js/vista.js"></script>
+    <script src="js/controlador.js"></script>
+    <script>
+        function iniciarAdmin() {
+            mostrarProductos(obtenerProductos(), "productosAdmin");
+        }
+
+        function agregarAdmin() {
+            const nombre = document.getElementById("nombre").value;
+            const precio = parseInt(document.getElementById("precio").value);
+            const cantidad = parseInt(document.getElementById("cantidad").value);
+            const descripcion = document.getElementById("descripcion").value;
+            agregarProductoAdmin(nombre, precio, cantidad, descripcion);
+            iniciarAdmin();
+            alert("Producto agregado");
+        }
+
+        iniciarAdmin();
+    </script>
+</body>
+</html>
